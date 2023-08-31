@@ -1,0 +1,111 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+android {
+    namespace 'com.example.hcart'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.hcart"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures
+            {
+
+                viewBinding = true
+            }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+    implementation "com.airbnb.android:lottie:3.7.0"
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //motion toast
+    implementation 'com.github.Spikeysanju:MotionToast:1.3.3.4'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Scalable size unit(support for different size screens)
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    implementation 'com.google.zxing:core:3.2.1'
+
+    //scanner
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+
+    //Tiny db
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
+
+    //surround card view
+    implementation "com.furkanakdemir:surroundcardview:1.0.6"
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //Room Database
+    implementation 'androidx.room:room-runtime:2.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
+
+    //Room database for personal
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation('com.facebook.fresco:fresco:2.6.0') {
+        exclude group: 'com.facebook.soloader', module: 'soloader'
+        exclude group: 'com.facebook.fresco', module: 'soloader'
+        exclude group: 'com.facebook.fresco', module: 'nativeimagefilters'
+        exclude group: 'com.facebook.fresco', module: 'nativeimagetranscoder'
+        exclude group: 'com.facebook.fresco', module: 'memory-type-native'
+        exclude group: 'com.facebook.fresco', module: 'imagepipeline-native'
+    }
+
+    // For WebP support, including animated WebP
+    implementation 'com.facebook.fresco:animated-webp:2.6.0'
+    implementation 'com.facebook.fresco:webpsupport:2.6.0'
+    implementation 'com.facebook.fresco:fresco:2.6.0'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+}

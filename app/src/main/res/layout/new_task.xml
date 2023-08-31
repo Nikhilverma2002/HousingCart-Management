@@ -1,0 +1,60 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/newTaskText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="@string/add_your_tasks_here"
+        android:paddingEnd="35dp"
+        android:paddingTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newTaskText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/save"
+        android:paddingBottom="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/newTaskText"
+        app:layout_constraintTop_toBottomOf="@+id/newTaskText" />
+
+    <TextView
+        android:id="@+id/new_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:maxLines="1"
+        android:gravity="start"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/newTaskButton"
+        app:layout_constraintEnd_toStartOf="@+id/newTaskButton"
+        app:layout_constraintStart_toStartOf="@+id/newTaskText"
+        app:layout_constraintTop_toTopOf="@+id/newTaskButton"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
